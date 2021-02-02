@@ -4,125 +4,68 @@
     <meta charset="utf-8" >
 
 <title>2020 年度大戏 | ALL 4 $$$</title>
-<meta name="description" content="搞钱才是硬道理！！！">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://coder4lin.github.io/favicon.ico?v=1611754454982">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://coder4lin.github.io/favicon.ico?v=1612245682800">
 <link rel="stylesheet" href="https://coder4lin.github.io/styles/main.css">
 
 
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
+
+    <meta name="description" content="😀
+魔幻的2020已经过去，2021 他终于来了。
+" />
+    <meta name="keywords" content="生活,规划" />
   </head>
   <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://coder4lin.github.io">ALL 4 $$$</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://coder4lin.github.io">
+        <img src="https://coder4lin.github.io/images/avatar.png?v=1612245682800" class="site-logo">
+        <h1 class="site-title">ALL 4 $$$</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
         
-          <li>
-            
-              <a href="/" class="menu">
-                首页
-              </a>
-            
-          </li>
+          <a href="/" class="site-nav">
+            首页
+          </a>
         
-          <li>
-            
-              <a href="/archives" class="menu">
-                归档
-              </a>
-            
-          </li>
+      
         
-          <li>
-            
-              <a href="/tags" class="menu">
-                标签
-              </a>
-            
-          </li>
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
         
-          <li>
-            
-              <a href="/post/about" class="menu">
-                关于
-              </a>
-            
-          </li>
+      
         
-      </ul>
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
     </div>
   </div>
-</nav>
-
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>2020 年度大戏</h1>
-            <p class="article-meta">
-              2021-01-27
-              
-                <a href="https://coder4lin.github.io/tag/m56tlxiGe/" class="badge warning">
-                  生活
-                </a>
-              
-                <a href="https://coder4lin.github.io/tag/ykQXeDw7rT/" class="badge warning">
-                  规划
-                </a>
-              
-            </p>
-            
-            <div class="post-content">
-              <p>😀</p>
-<p>魔幻的2020已经过去，2021 他终于来了。</p>
-
-            </div>
-          </article>
-        </div>
-        <div class="paper" data-aos="fade-in">
-          
-            <div class="next-post">
-              <div class="next">
-                下一篇
-              </div>
-              <a href="https://coder4lin.github.io/post/hello-gridea/">
-                <h3 class="post-title">
-                  Hello Gridea
-                </h3>
-              </a>
-            </div>
-          
-        </div>
-        
-      </div>
-
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://coder4lin.github.io/images/avatar.png?v=1611754454982" class="no-responsive avatar">
-    <div class="text-muted">搞钱才是硬道理！！！</div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
     <div class="social-container">
       
         
@@ -136,78 +79,74 @@
         
       
     </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
+    <div class="site-description">
+      搞钱才是硬道理！！！
     </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://coder4lin.github.io/post/2021-nian-du-ji-hua/">2021 年度计划</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://coder4lin.github.io/post/2020-nian-du-da-xi/">2020 年度大戏</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://coder4lin.github.io/post/about/">关于</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://coder4lin.github.io/post/hello-gridea/">Hello Gridea</a>
-            </li>
-          
-        
-      </ul>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://coder4lin.github.io/atom.xml" target="_blank">RSS</a>
     </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://coder4lin.github.io/tag/m56tlxiGe/" class="badge secondary">
-          生活
-        </a>
-      
-        <a href="https://coder4lin.github.io/tag/ykQXeDw7rT/" class="badge warning">
-          规划
-        </a>
-      
-        <a href="https://coder4lin.github.io/tag/1kugfEs92/" class="badge warning">
-          Gridea
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://coder4lin.github.io/atom.xml" target="_blank">RSS</a>
   </div>
 </div>
 
 
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">2020 年度大戏</h2>
+            <div class="post-date">2021-01-27</div>
+            
+            <div class="post-content" v-pre>
+              <p>😀</p>
+<p>魔幻的2020已经过去，2021 他终于来了。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://coder4lin.github.io/tag/m56tlxiGe/" class="tag">
+                    生活
+                  </a>
+                
+                  <a href="https://coder4lin.github.io/tag/ykQXeDw7rT/" class="tag">
+                    规划
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://coder4lin.github.io/post/hello-gridea/">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
 <script type="application/javascript">
 
 AOS.init();
 
-hljs.initHighlightingOnLoad()
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
+
+
 
 
 
