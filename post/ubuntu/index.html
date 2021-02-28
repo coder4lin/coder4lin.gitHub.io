@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Ubuntu | ALL 4 $$$</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://coder4lin.github.io/favicon.ico?v=1614499738280">
+<link rel="stylesheet" href="https://coder4lin.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="Ubuntu
+Ubuntu的安装
+镜像下载
+http://mirrors.aliyun.com/ubuntu-releases/20.04.2.0/
+mac下写入镜像到U盘
+先卸载U盘
+方式一：磁盘工具里面找到U盘，把它卸载。
+
+或者在终端..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://coder4lin.github.io">
+        <img src="https://coder4lin.github.io/images/avatar.png?v=1614499738280" class="site-logo">
+        <h1 class="site-title">ALL 4 $$$</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      搞钱才是硬道理！！！
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://coder4lin.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Ubuntu</h2>
+            <div class="post-date">2021-02-28</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="ubuntu">Ubuntu</h1>
+<h2 id="ubuntu的安装">Ubuntu的安装</h2>
+<h3 id="镜像下载">镜像下载</h3>
+<p>http://mirrors.aliyun.com/ubuntu-releases/20.04.2.0/</p>
+<h3 id="mac下写入镜像到u盘">mac下写入镜像到U盘</h3>
+<p>先卸载U盘</p>
+<p>方式一：磁盘工具里面找到U盘，把它卸载。</p>
+<p><img src="/Users/mac/Desktop/1067696-20170517072906322-459154198.png" alt="img" loading="lazy"><br>
+或者在终端里面使用命令:</p>
+<p><code>diskutil unmount /Volumes/usb</code></p>
+<figure data-type="image" tabindex="1"><img src="https://images2015.cnblogs.com/blog/1067696/201705/1067696-20170517073115150-1822152110.png" alt="img" loading="lazy"></figure>
+<p>使用dd命令</p>
+<pre><code>Caden-Mac:~ caden$ sudo dd if=/Volumes/Data/Download/CentOS-7-x86_64-Minimal-1611.iso of=/dev/disk2 bs=10m
+680+0 records in
+680+0 records out
+713031680 bytes transferred in 283.865894 secs (2511861 bytes/sec)
+</code></pre>
+<p>解释<br>
+参数if- 输入文件名，就是iso的文件名<br>
+参数of- 输出文件名<br>
+参数bs- 同时设置读写块的大小，单位是bytes<br>
+会等待比较长的时间，别管它，等它结束。</p>
+<h2 id="ubuntu-设置">Ubuntu 设置</h2>
+<h3 id="使用阿里软件源">使用阿里软件源</h3>
+<p>图形界面配置</p>
+<p>新手推荐使用图形界面配置： 系统设置 -&gt; 软件和更新 选择下载服务器 -&gt; &quot;mirrors.aliyun.com&quot;</p>
+<p>手动更改</p>
+<p>用你熟悉的编辑器打开：</p>
+<pre><code>/etc/apt/sources.list
+</code></pre>
+<p>替换默认的</p>
+<pre><code>http://archive.ubuntu.com/
+</code></pre>
+<p>为</p>
+<pre><code>mirrors.aliyun.com
+</code></pre>
+<h3 id="安装jdk">安装JDK</h3>
+<h4 id="open-jdk">Open-JDK</h4>
+<pre><code class="language-bash">sudo apt-get update
+
+sudo apt-get install openjdk-8-jdk
+
+java -version
+
+</code></pre>
+<h4 id="oracle-java-jdk">Oracle Java JDK</h4>
+<p>方式一：</p>
+<pre><code class="language-java">-- 安装依赖包
+sudo apt-get install python-software-properties
+  
+-- 添加仓库源
+sudo add-apt-repository ppa:webupd8team/java
+  或
+sudo add-apt-repository ppa:ts.sch.gr/ppa
+
+-- 更新软件包列表
+sudo apt-get update
+
+-- 安装java JDK
+sudo apt-get install oracle-java8-installer
+
+</code></pre>
+<p>方式二：</p>
+<p>手动下载压缩包安装oracle Java JDK<br>
+1、前往oracle Java官网下载JDK（http://www.oracle.com/technetwork/java/javase/downloads/index.html）</p>
+<p>推荐华为镜像地址：https://mirrors.huaweicloud.com/java/jdk/</p>
+<pre><code class="language-sh">解压缩到指定目录（以jdk-8u191-linux-x64.tar.gz为例）
+创建目录:
+sudo mkdir /usr/lib/jvm
+解压缩到该目录:
+sudo tar -zxvf jdk-7u60-linux-x64.gz -C /usr/lib/jvm
+3.修改环境变量:　　
+
+sudo vi ~/.bashrc
+在文件末尾追加下面内容：
+
+#set oracle jdk environment
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_191  ## 这里要注意目录要换成自己解压的jdk 目录
+export JRE_HOME=${JAVA_HOME}/jre  
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
+export PATH=${JAVA_HOME}/bin:$PATH  
+
+使环境变量马上生效：
+
+source ~/.bashrc
+4、系统注册此jdk
+
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_191/bin/java 300
+5、查看java版本，看看是否安装成功：
+
+java -version
+如果你安装了多个版本的jdk，你可以通过以下命令在这些版本之间切换：
+
+sudo update-alternatives –config java
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://coder4lin.github.io/post/jia-zi-gu/">
+                  <h3 class="post-title">
+                    架子鼓
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
